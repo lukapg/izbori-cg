@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .input-group-text {
+        border-radius: 0;
+      }
+      .izlaznost,
+      #tabela_listi {
+        margin-bottom: 40px;
+      }
+
+      input[readonly],
+      input[readonly]:focus {
+        background-color: #f8f9fa;
+        border: 0;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body class="m-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="border p-3 izlaznost">
+          <div class="input-group align-items-center mb-2">
+            <label for="exampleInputEmail1" class="w-50"
+              >Upisanih birača:
+            </label>
+            <input
+              type="number"
+              class="form-control"
+              id="upisanih"
+              placeholder="Enter email"
+              value="542468"
+              readonly
+            />
+          </div>
+          <div class="input-group align-items-center mb-2">
+            <label for="exampleInputEmail1" class="w-50"
+              >Procenat izlaznosti:
+            </label>
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="procenat_izaslih"
+              placeholder="Unesi procenat izašlih..."
+            />
+            <div class="input-group-append">
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
+          <div class="input-group align-items-center">
+            <label for="exampleInputEmail1 " class="w-50"
+              >Broj izašlih birača:
+            </label>
+            <input
+              type="number"
+              class="form-control"
+              id="broj_izaslih"
+              readonly
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table" id="tabela_listi">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Lista</th>
+                <th scope="col">Broj glasova</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <th>Bošnjačka stranka</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <th>HGI</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <th>Pravda za sve</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <th>SNP - Demos</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <th>Narodna koalicija</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <th>Albanska alijansa</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <th>Pokret "Preokret"</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <th>Pokret za promjene</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <th>Mi možemo - Za građansku Crnu Goru</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <th>DPS-SD-LPCG-DUA</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">11</th>
+                <th>Pokret "Evropa sad"</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">12</th>
+                <th>SDP</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">13</th>
+                <th>"Hrabro se broji" - Demokrate i URA</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">14</th>
+                <th>“Za budućnost Crne Gore” NSD-DNP-RP</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">15</th>
+                <th>Albanski forum</th>
+                <td>
+                  <input type="text" class="form-control broj-lista" readonly />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control procenat-lista"
+                    min="0"
+                  />
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="col">Ukupno</th>
+                <th scope="col"></th>
+                <th scope="col">
+                  <input
+                    type="number"
+                    id="zbir_glasova"
+                    class="form-control"
+                    readonly
+                  />
+                </th>
+                <th scope="col">
+                  <input
+                    type="number"
+                    id="zbir_procenata"
+                    class="form-control"
+                    readonly
+                  />
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table" id="tabela_mandata">
+            <thead>
+              <tr>
+                <th scope="col">Lista #</th>
+                <th scope="col">Broj mandata</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+    <script>
+      $("#procenat_izaslih").blur(function () {
+        var upisanih = $("#upisanih").val();
+        var izaslih_procenat = $(this).val() / 100;
+        var broj_izaslih = Math.floor(upisanih * izaslih_procenat);
+        $("#broj_izaslih").val(broj_izaslih);
+      });
+
+      $(".procenat-lista").on("blur", function () {
+        var broj_izaslih = $("#broj_izaslih").val();
+
+        if (!broj_izaslih) {
+          alert("Broj izašlih birača mora biti unesen!");
+          return;
+        }
+
+        var procenat_lista = $(this).val() / 100;
+        var broj_lista = Math.floor(broj_izaslih * procenat_lista);
+
+        $(this).closest("tr").find("input.broj-lista").val(broj_lista);
+
+        saberi_ukupno();
+
+        if (!provjeri_procente_preko_100()) {
+          alert("Ukupan zbir procenata ne moze biti preko 100%!");
+          return;
+        }
+
+        if (provjeri_sve_liste_unijete()) {
+          if (!provjeri_procente_ispod_100()) {
+            alert("Ukupan zbir procenata ne moze biti ispod 100%");
+          }
+
+          const dont_inicijalni_niz = napuni_incijalni_niz_dont();
+          const obradjeni_niz = obradi_dont_niz(dont_inicijalni_niz);
+          const mandati = prebroj_mandate(obradjeni_niz);
+
+          mandati.forEach((el) => {
+            $("#tabela_mandata")
+              .find("tbody")
+              .append(
+                $("<tr>")
+                  .append($("<th>").attr("scope", "row").text(el[0]))
+                  .append($("<td>").text(el[1]))
+              );
+          });
+
+          console.log(mandati);
+        }
+      });
+
+      function saberi_ukupno() {
+        var procenti = 0;
+        var glasovi = 0;
+        $(".procenat-lista").each(function () {
+          if ($(this).val()) {
+            procenti = (
+              parseFloat(procenti) + parseFloat($(this).val())
+            ).toFixed(2);
+          }
+        });
+        $("#zbir_procenata").val(procenti);
+
+        $(".broj-lista").each(function () {
+          if ($(this).val()) {
+            glasovi = (parseFloat(glasovi) + parseFloat($(this).val())).toFixed(
+              0
+            );
+          }
+        });
+        $("#zbir_glasova").val(glasovi);
+      }
+
+      function provjeri_procente_preko_100() {
+        var sum = 0;
+        $(".procenat-lista").each(function () {
+          if ($(this).val()) {
+            sum = (parseFloat(sum) + parseFloat($(this).val())).toFixed(2);
+          }
+        });
+        if (sum > 100) {
+          return false;
+        }
+        return true;
+      }
+
+      function provjeri_procente_ispod_100() {
+        var sum = 0;
+        $(".procenat-lista").each(function () {
+          if ($(this).val()) {
+            sum = (parseFloat(sum) + parseFloat($(this).val())).toFixed(2);
+          }
+        });
+        if (sum < 100) {
+          return false;
+        }
+        return true;
+      }
+
+      function provjeri_sve_liste_unijete() {
+        var indikator = true;
+
+        $(".procenat-lista").each(function () {
+          if (!$(this).val()) {
+            indikator = false;
+          }
+        });
+
+        return indikator;
+      }
+
+      function napuni_incijalni_niz_dont() {
+        var niz = new Array();
+        $(".broj-lista").each(function () {
+          var lista = $(this).closest("tr").index() + 1;
+          var procenat = $(this)
+            .closest("tr")
+            .find("input.procenat-lista")
+            .val();
+          if (parseFloat(procenat) >= 3) {
+            var noviRed = new Array();
+            noviRed[0] = lista;
+            noviRed[1] = parseFloat($(this).val()).toFixed(0);
+            niz.push(noviRed);
+          }
+        });
+
+        return niz;
+      }
+
+      function obradi_dont_niz(niz) {
+        var obradjeni_niz = new Array();
+
+        niz.forEach((el) => {
+          for (i = 1; i <= 78; i++) {
+            var tempNiz = new Array();
+            tempNiz[0] = el[0];
+            tempNiz[1] = Math.round(el[1] / i);
+            obradjeni_niz.push(tempNiz);
+          }
+        });
+
+        const sortirani_niz = obradjeni_niz.sort((a, b) => b[1] - a[1]);
+        const mandati = sortirani_niz.slice(0, 78);
+
+        return mandati;
+      }
+
+      function prebroj_mandate(niz) {
+        var mandati = new Array();
+        for (i = 1; i <= 15; i++) {
+          const broj_mandata = niz.reduce(
+            (zbir, el) => (el[0] === i ? ++zbir : zbir),
+            0
+          );
+          mandati.push([i, broj_mandata]);
+        }
+        return mandati;
+      }
+    </script>
+  </body>
+</html>
